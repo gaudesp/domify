@@ -1,19 +1,44 @@
-# domify
 
-A new Flutter project.
+# Domify 🏠🔌
 
-## Getting Started
+Domify est une application Flutter pour gérer vos **maisons** et vos **appareils connectés**. Ajoutez, gérez et visualisez facilement l'ensemble de vos appareils dans chaque maison !
 
-This project is a starting point for a Flutter application.
+## ✨ Fonctionnalités 
+- **Ajout de maisons** 🏡
+- **Gestion d'appareils** 🔌
+- **Récapitulatif statistiques** 📊
+- **Navigation fluide** 🔄
 
-A few resources to get you started if this is your first Flutter project:
+## ⚙️ Prérequis
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter 3.0+  
+- Dart 2.17+
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Installation
 
-start : flutter run -d web-server
-build : flutter pub get
+1. Clonez ce repo :
+   ```bash
+   git clone https://github.com/votre-username/domify.git
+   ```
+
+2. Installez les dépendances :
+   ```bash
+   flutter pub get
+   ```
+
+## 🌐 Démarrage
+
+Si vous souhaitez lancer l'application dans un navigateur Web, utilisez la commande suivante pour démarrer le serveur de développement :
+
+```bash
+flutter run -d web-server
+```
+
+## 📦 Dépendances
+
+- `hive_flutter` pour la gestion des données locales 🗄️
+- `flutter` pour la base du projet 📱
+
+## Contribution 🤝
+
+[@gaudesp](https://github.com/gaudesp) : Main developer
