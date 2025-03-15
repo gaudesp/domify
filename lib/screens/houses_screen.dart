@@ -1,5 +1,4 @@
 // lib/screens/houses_screen.dart
-
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:domify/models/house.dart';
@@ -18,17 +17,6 @@ class HousesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Maisons'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.add),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => AddHouseScreen()),
-              );
-            },
-          ),
-        ],
       ),
       bottomNavigationBar: const NavigationBarWidget(selectedIndex: 1),
       body: ValueListenableBuilder(

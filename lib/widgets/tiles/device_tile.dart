@@ -1,4 +1,4 @@
-// lib/widgets/device_tile.dart
+// lib/widgets/tiles/device_tile.dart
 import 'package:flutter/material.dart';
 import 'package:domify/models/device.dart';
 

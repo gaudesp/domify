@@ -1,3 +1,4 @@
+// lib/screens/home_screen.dart
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:domify/models/house.dart';
@@ -24,7 +25,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const WelcomeCard(),  // Remplacer l'ancienne card par WelcomeCard
+            const WelcomeCard(),
             const SizedBox(height: 20),
             Row(
               children: [

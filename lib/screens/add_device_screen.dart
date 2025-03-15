@@ -83,17 +83,20 @@ class _AddDeviceScreenState extends State<AddDeviceScreen> {
                     },
                   ),
                 ),
-                ElevatedButton(
-                  onPressed: selectedDevices.isEmpty
-                      ? null
-                      : () {
-                          setState(() {
-                            widget.house.devices.addAll(selectedDevices);
-                            widget.house.save();
-                          });
-                          Navigator.pop(context);
-                        },
-                  child: const Text('Valider'),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
+                  child: ElevatedButton(
+                    onPressed: selectedDevices.isEmpty
+                        ? null
+                        : () {
+                            setState(() {
+                              widget.house.devices.addAll(selectedDevices);
+                              widget.house.save();
+                            });
+                            Navigator.pop(context);
+                          },
+                    child: const Text('Valider'),
+                  ),
                 ),
               ],
             ),

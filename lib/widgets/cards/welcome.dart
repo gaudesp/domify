@@ -1,3 +1,4 @@
+// lib/widgets/cards/welcome.dart
 import 'package:flutter/material.dart';
 
 class WelcomeCard extends StatelessWidget {

@@ -1,4 +1,4 @@
-// lib/widgets/navigation_bar.dart
+// lib/widgets/navigation/navbar.dart
 import 'package:flutter/material.dart';
 import 'package:domify/screens/home_screen.dart';
 import 'package:domify/screens/houses_screen.dart';

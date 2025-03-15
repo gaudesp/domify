@@ -1,4 +1,4 @@
-// 📂 lib/widgets/summary_card.dart
+// lib/widgets/cards/summary.dart
 import 'package:flutter/material.dart';
 
 class SummaryCard extends StatelessWidget {
@@ -19,8 +19,8 @@ class SummaryCard extends StatelessWidget {
       child: Card(
         child: ListTile(
           leading: Icon(icon, size: 40),
-          title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
-          subtitle: Text(value),
+          title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+          subtitle: Text(value, style: const TextStyle(fontSize: 12)),
         ),
       ),
     );
