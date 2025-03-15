@@ -1,7 +1,9 @@
-// lib/screens/home_screen.dart
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
-import '../models/house.dart';
+import 'package:domify/models/house.dart';
+import 'package:domify/widgets/navigation/navbar.dart';
+import 'package:domify/widgets/cards/summary.dart';
+import 'package:domify/widgets/cards/welcome.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -16,39 +18,18 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: const Text('Accueil')),
+      bottomNavigationBar: const NavigationBarWidget(selectedIndex: 0),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Card(
-              child: Padding(
-                padding: EdgeInsets.all(16.0),
-                child: Text(
-                  'Bienvenue sur Domify. Gérez vos maisons et appareils connectés.',
-                  style: TextStyle(fontSize: 18),
-                ),
-              ),
-            ),
+            const WelcomeCard(),  // Remplacer l'ancienne card par WelcomeCard
             const SizedBox(height: 20),
             Row(
               children: [
-                Expanded(
-                  child: Card(
-                    child: ListTile(
-                      title: const Text('Maisons'),
-                      subtitle: Text('$totalHouses créées'),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Card(
-                    child: ListTile(
-                      title: const Text('Appareils'),
-                      subtitle: Text('$totalDevices ajoutés'),
-                    ),
-                  ),
-                ),
+                SummaryCard(title: 'Maisons', value: '$totalHouses créées', icon: Icons.house),
+                SummaryCard(title: 'Appareils', value: '$totalDevices ajoutés', icon: Icons.devices),
               ],
             ),
           ],

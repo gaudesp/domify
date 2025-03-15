@@ -1,7 +1,8 @@
-// lib/screens/add_house_screen.dart
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
-import '../models/house.dart';
+import 'package:domify/models/house.dart';
+import 'package:domify/widgets/navigation/navbar.dart';
+import 'package:domify/widgets/forms/custom_text_field.dart';
 
 class AddHouseScreen extends StatelessWidget {
   final TextEditingController _controller = TextEditingController();
@@ -10,13 +11,20 @@ class AddHouseScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Ajouter une maison')),
+      bottomNavigationBar: const NavigationBarWidget(selectedIndex: 1),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            TextField(
+            CustomTextField(
               controller: _controller,
-              decoration: const InputDecoration(labelText: 'Nom de la maison'),
+              label: 'Nom de la maison',
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Ce champ est requis';
+                }
+                return null;
+              },
             ),
             const SizedBox(height: 20),
             ElevatedButton(

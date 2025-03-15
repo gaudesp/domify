@@ -1,8 +1,10 @@
 // lib/screens/add_device_screen.dart
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
-import '../models/house.dart';
-import '../models/device.dart';
+import 'package:domify/models/house.dart';
+import 'package:domify/models/device.dart';
+import 'package:domify/widgets/navigation/navbar.dart';
+import 'package:domify/widgets/indicators/loading.dart';
 
 class AddDeviceScreen extends StatefulWidget {
   final House house;
@@ -42,8 +44,9 @@ class _AddDeviceScreenState extends State<AddDeviceScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Ajouter des appareils')),
+      bottomNavigationBar: const NavigationBarWidget(selectedIndex: 1),
       body: isLoading
-          ? const Center(child: CircularProgressIndicator())
+          ? const LoadingIndicator()
           : Column(
               children: [
                 Expanded(

@@ -2,9 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import '../models/house.dart';
-import 'add_house_screen.dart';
-import 'devices_screen.dart';
+import 'package:domify/models/house.dart';
+import 'package:domify/screens/add_house_screen.dart';
+import 'package:domify/widgets/navigation/navbar.dart';
+import 'package:domify/widgets/tiles/house_tile.dart';
+import 'package:domify/widgets/buttons/add_button.dart';
 
 class HousesScreen extends StatelessWidget {
   const HousesScreen({Key? key}) : super(key: key);
@@ -28,6 +30,7 @@ class HousesScreen extends StatelessWidget {
           ),
         ],
       ),
+      bottomNavigationBar: const NavigationBarWidget(selectedIndex: 1),
       body: ValueListenableBuilder(
         valueListenable: houseBox.listenable(),
         builder: (context, Box<House> box, _) {
@@ -38,30 +41,18 @@ class HousesScreen extends StatelessWidget {
           return ListView.builder(
             itemCount: box.length,
             itemBuilder: (context, index) {
-              House house = box.getAt(index)!;
-              return ListTile(
-                title: Text(house.name),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => DevicesScreen(house: house),
-                    ),
-                  );
-                },
-              );
+              return HouseTile(house: box.getAt(index)!);
             },
           );
         },
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: AddButton(
         onPressed: () {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => AddHouseScreen()),
           );
         },
-        child: const Icon(Icons.add),
       ),
     );
   }

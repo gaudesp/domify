@@ -2,8 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import '../models/house.dart';
-import 'add_device_screen.dart';
+import 'package:domify/models/house.dart';
+import 'package:domify/screens/add_device_screen.dart';
+import 'package:domify/widgets/navigation/navbar.dart';
+import 'package:domify/widgets/tiles/device_tile.dart';
+import 'package:domify/widgets/buttons/add_button.dart';
 
 class DevicesScreen extends StatefulWidget {
   final House house;
@@ -21,6 +24,7 @@ class _DevicesScreenState extends State<DevicesScreen> {
       appBar: AppBar(
         title: Text('Appareils de ${widget.house.name}'),
       ),
+      bottomNavigationBar: const NavigationBarWidget(selectedIndex: 1),
       body: ValueListenableBuilder(
         valueListenable: Hive.box<House>('houses').listenable(),
         builder: (context, Box<House> box, _) {
@@ -36,14 +40,12 @@ class _DevicesScreenState extends State<DevicesScreen> {
           return ListView.builder(
             itemCount: updatedHouse.devices.length,
             itemBuilder: (context, index) {
-              return ListTile(
-                title: Text(updatedHouse.devices[index].name),
-              );
+              return DeviceTile(device: updatedHouse.devices[index]);
             },
           );
         },
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: AddButton(
         onPressed: () async {
           await Navigator.push(
             context,
@@ -51,7 +53,6 @@ class _DevicesScreenState extends State<DevicesScreen> {
           );
           setState(() {});
         },
-        child: const Icon(Icons.add),
       ),
     );
   }
