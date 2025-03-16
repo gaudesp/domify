@@ -1,9 +1,9 @@
 // lib/main.dart
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'models/house.dart';
-import 'models/device.dart';
-import 'screens/home_screen.dart';
+import 'package:domify/models/house.dart';
+import 'package:domify/models/device.dart';
+import 'package:domify/screens/home.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

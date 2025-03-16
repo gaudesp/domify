@@ -1,7 +1,7 @@
 // lib/widgets/navigation/navbar.dart
 import 'package:flutter/material.dart';
-import 'package:domify/screens/home_screen.dart';
-import 'package:domify/screens/houses_screen.dart';
+import 'package:domify/screens/home.dart';
+import 'package:domify/screens/houses/list_houses.dart';
 
 class NavigationBarWidget extends StatelessWidget {
   final int selectedIndex;
@@ -10,7 +10,7 @@ class NavigationBarWidget extends StatelessWidget {
 
   void _onItemTapped(BuildContext context, int index) {
     if (index != selectedIndex) {
-      Widget nextScreen = index == 0 ? const HomeScreen() : const HousesScreen();
+      Widget nextScreen = index == 0 ? const HomeScreen() : const ListHousesScreen();
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) => nextScreen),
       );

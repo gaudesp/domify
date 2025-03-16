@@ -1,22 +1,22 @@
-// lib/screens/devices_screen.dart
+// lib/screens/devices/list_devices.dart
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:domify/models/house.dart';
-import 'package:domify/screens/add_device_screen.dart';
+import 'package:domify/screens/devices/add_device.dart';
 import 'package:domify/widgets/navigation/navbar.dart';
 import 'package:domify/widgets/tiles/device_tile.dart';
 import 'package:domify/widgets/buttons/add_button.dart';
 
-class DevicesScreen extends StatefulWidget {
+class ListDevicesScreen extends StatefulWidget {
   final House house;
 
-  const DevicesScreen({Key? key, required this.house}) : super(key: key);
+  const ListDevicesScreen({Key? key, required this.house}) : super(key: key);
 
   @override
-  _DevicesScreenState createState() => _DevicesScreenState();
+  _ListDevicesScreenState createState() => _ListDevicesScreenState();
 }
 
-class _DevicesScreenState extends State<DevicesScreen> {
+class _ListDevicesScreenState extends State<ListDevicesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

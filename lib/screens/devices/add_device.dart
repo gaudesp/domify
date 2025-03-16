@@ -1,4 +1,4 @@
-// lib/screens/add_device_screen.dart
+// lib/screens/devices/add_device.dart
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:domify/models/house.dart';

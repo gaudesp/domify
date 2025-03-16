@@ -1,14 +1,14 @@
-// lib/screens/houses_screen.dart
+// lib/screens/houses/list_houses.dart
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:domify/models/house.dart';
-import 'package:domify/screens/add_house_screen.dart';
+import 'package:domify/screens/houses/add_house.dart';
 import 'package:domify/widgets/navigation/navbar.dart';
 import 'package:domify/widgets/tiles/house_tile.dart';
 import 'package:domify/widgets/buttons/add_button.dart';
 
-class HousesScreen extends StatelessWidget {
-  const HousesScreen({Key? key}) : super(key: key);
+class ListHousesScreen extends StatelessWidget {
+  const ListHousesScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

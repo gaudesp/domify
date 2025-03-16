@@ -1,7 +1,7 @@
 // lib/widgets/tiles/house_tile.dart
 import 'package:flutter/material.dart';
 import 'package:domify/models/house.dart';
-import 'package:domify/screens/devices_screen.dart';
+import 'package:domify/screens/devices/list_devices.dart';
 
 class HouseTile extends StatelessWidget {
   final House house;
@@ -18,7 +18,7 @@ class HouseTile extends StatelessWidget {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => DevicesScreen(house: house)),
+            MaterialPageRoute(builder: (context) => ListDevicesScreen(house: house)),
           );
         },
       ),
