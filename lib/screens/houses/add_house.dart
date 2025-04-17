@@ -8,6 +8,8 @@ import 'package:domify/widgets/forms/custom_text_field.dart';
 class AddHouseScreen extends StatelessWidget {
   final TextEditingController _controller = TextEditingController();
 
+  AddHouseScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

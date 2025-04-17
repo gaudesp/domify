@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 class WelcomeCard extends StatelessWidget {
-  const WelcomeCard({Key? key}) : super(key: key);
+  const WelcomeCard({super.key});
 
   @override
   Widget build(BuildContext context) {

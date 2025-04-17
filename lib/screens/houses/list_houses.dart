@@ -8,7 +8,7 @@ import 'package:domify/widgets/tiles/house_tile.dart';
 import 'package:domify/widgets/buttons/add_button.dart';
 
 class ListHousesScreen extends StatelessWidget {
-  const ListHousesScreen({Key? key}) : super(key: key);
+  const ListHousesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

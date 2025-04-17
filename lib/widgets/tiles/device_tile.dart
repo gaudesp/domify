@@ -5,7 +5,7 @@ import 'package:domify/models/device.dart';
 class DeviceTile extends StatelessWidget {
   final Device device;
 
-  const DeviceTile({Key? key, required this.device}) : super(key: key);
+  const DeviceTile({super.key, required this.device});
 
   @override
   Widget build(BuildContext context) {

@@ -17,7 +17,7 @@ void main() async {
 }
 
 class DomifyApp extends StatelessWidget {
-  const DomifyApp({Key? key}) : super(key: key);
+  const DomifyApp({super.key});
 
   @override
   Widget build(BuildContext context) {

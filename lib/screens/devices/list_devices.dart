@@ -10,7 +10,7 @@ import 'package:domify/widgets/buttons/add_button.dart';
 class ListDevicesScreen extends StatefulWidget {
   final House house;
 
-  const ListDevicesScreen({Key? key, required this.house}) : super(key: key);
+  const ListDevicesScreen({super.key, required this.house});
 
   @override
   _ListDevicesScreenState createState() => _ListDevicesScreenState();

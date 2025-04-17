@@ -5,7 +5,7 @@ class AddButton extends StatelessWidget {
   final VoidCallback onPressed;
   final IconData icon;
 
-  const AddButton({Key? key, required this.onPressed, this.icon = Icons.add}) : super(key: key);
+  const AddButton({super.key, required this.onPressed, this.icon = Icons.add});
 
   @override
   Widget build(BuildContext context) {

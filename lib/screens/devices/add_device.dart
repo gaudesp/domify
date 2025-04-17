@@ -1,6 +1,5 @@
 // lib/screens/devices/add_device.dart
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:domify/models/house.dart';
 import 'package:domify/models/device.dart';
 import 'package:domify/widgets/navigation/navbar.dart';
@@ -9,7 +8,7 @@ import 'package:domify/widgets/indicators/loading.dart';
 class AddDeviceScreen extends StatefulWidget {
   final House house;
 
-  const AddDeviceScreen({Key? key, required this.house}) : super(key: key);
+  const AddDeviceScreen({super.key, required this.house});
 
   @override
   _AddDeviceScreenState createState() => _AddDeviceScreenState();

@@ -6,7 +6,7 @@ import 'package:domify/screens/devices/list_devices.dart';
 class HouseTile extends StatelessWidget {
   final House house;
 
-  const HouseTile({Key? key, required this.house}) : super(key: key);
+  const HouseTile({super.key, required this.house});
 
   @override
   Widget build(BuildContext context) {

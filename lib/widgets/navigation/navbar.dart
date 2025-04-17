@@ -6,7 +6,7 @@ import 'package:domify/screens/houses/list_houses.dart';
 class NavigationBarWidget extends StatelessWidget {
   final int selectedIndex;
 
-  const NavigationBarWidget({Key? key, required this.selectedIndex}) : super(key: key);
+  const NavigationBarWidget({super.key, required this.selectedIndex});
 
   void _onItemTapped(BuildContext context, int index) {
     if (index != selectedIndex) {
