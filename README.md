@@ -1,5 +1,5 @@
 # Domify 🏠🔌
-Domify est une application web et mobile développée avec **Flutter** et **Dart**, permettant de gérer et contrôler vos maisons et appareils connectés de manière intuitive.
+**Domify** est une application web et mobile développée en **Dart** avec **Flutter**, permettant aux utilisateurs de gérer et contrôler leurs maisons et appareils connectés de manière intuitive.
 
 ## ⚙️ Prérequis
 - **Flutter** (*version* : `3.7.2`)
@@ -32,5 +32,5 @@ cd domify
 - `hive_generator` & `build_runner` : Utilisés pour la génération d’adapters Hive via annotations (@HiveType, etc.).
 - `flutter_lints`* : Ensemble de règles de linting pour maintenir une base de code propre.
 
-## Contribution 🤝
+## 🤝 Contribution
 Lead developer : [@gaudesp](https://github.com/gaudesp)
